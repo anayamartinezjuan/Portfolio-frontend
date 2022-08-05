@@ -5,6 +5,7 @@ import './Portfolio.css'
 function Portfolio(){
     const [projects, setProjects] = useState({});
     useEffect(() => {
+        // axios.get('http://localhost:8080/portfolio')
         axios.get('https://backend-porfolio-juan.herokuapp.com/portfolio')
         .then(
             res => setProjects(res.data)
